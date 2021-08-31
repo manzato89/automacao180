@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebBase from QA Ninja</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Cadastro de Alunos</h1>
+        <form>
+
+            <label for="nomeCompleto">Nome Completo</label>
+            <input name="nomeCompleto" type="text" v-model="form.nome">
+
+            <label for="email">e-Mail</label>
+            <input name="email" type="text" v-model="form.email">
+
+            <label for="nota">Nota</label>
+            <input name="nota" type="text" v-model= "form.nota">
+
+            <input type="button" value="Cadastrar">
+        </form>
+
+        <span>
+            {{form.nome}} - {{form.email}} - {{form.nota}}
+        </span>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Nota</th>
+                </thead>
+                <tbody>
+                    <tr v-for="aluno in alunos">
+                        <td>{{aluno.nome}}</td>
+                        <td>{{aluno.email}}</td>
+                        <td>{{aluno.nota}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+        form: {
+            nome: '',
+            email: '',
+            nota: ''
+        },
+
+
+        alunos: [
+            { nome: 'Anderson Manzato', email: 'manzato89@gmail.com', nota: 10 },
+            { nome: 'José Victor', email: 'jvictor@gmail.com', nota: 10 },
+            { nome: 'Miriam Manzato', email: 'miriam@gmail.com', nota: 10 }
+        ]
+            }
+        })
+    </script>
+
+    <style>
+        .table {
+            margin-top: 20px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .table th,
+        td {
+            border-top: 1px solid #aaa;
+        }
+
+        input {
+            display: block;
+        }
+
+        input[type=button] {
+            background-color: #1976D2;
+            border-color: #1976D2;
+            color: #ddd;
+            margin-top: 10px;
+        }
+    </style>
+
+</body>
+
+</html>
