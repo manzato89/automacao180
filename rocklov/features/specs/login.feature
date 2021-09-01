@@ -5,11 +5,11 @@ Funcionalidade: Login
     Quero acessar o sistema da RockLov
     Para que eu possa anunciar meus equipamentos musicais
 
-    @temp
+    @login
     Cenario: Login do Usuário
 
         Dado que acesso a página principal
-        Quando submeto minhas credenciais com "manzato89@gmail.com" e "pwd123"
+        Quando submeto minhas credenciais com "manzato89@gmail.com" e "123456"
         Então sou redirecionado para o Dashboard
 
     Esquema do Cenario: Tentar Logar
