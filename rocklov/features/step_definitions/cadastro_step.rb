@@ -10,7 +10,7 @@ Quando('submeto o seguinte formulário de Cadastro:') do |table|
     user = table.hashes.first
     #log user
 
-    MongoDB.new.remove_user(user[:email])
+MongoDB.new.remove_user(user[:email])
 
     find("#fullName").set user[:nome]
     find("#email").set user[:email]

@@ -9,7 +9,7 @@ Funcionalidade: Login
     Cenario: Login do Usuário
 
         Dado que acesso a página principal
-        Quando submeto minhas credenciais com "manzato89@gmail.com" e "123456"
+        Quando submeto minhas credenciais com "anderson@teste.com.br" e "123456"
         Então sou redirecionado para o Dashboard
 
     Esquema do Cenario: Tentar Logar
@@ -19,9 +19,9 @@ Funcionalidade: Login
         Então vejo a mensagem de alerta: "<mensagem_output>"
 
         Exemplos:
-            | email_input          | senha_input | mensagem_output                  |
-            | manzato89@gmail.com  | abc123      | Usuário e/ou senha inválidos.    |
-            | manzato89@404.com    | abc123      | Usuário e/ou senha inválidos.    |
-            | manzato89#$gmail.com | abc123      | Oops. Informe um email válido!   |
-            |                      | abc123      | Oops. Informe um email válido!   |
-            | manzato89@gmail.com  |             | Oops. Informe sua senha secreta! |
+            | email_input            | senha_input | mensagem_output                  |
+            | anderson@gmail.com.br  | 123456      | Usuário e/ou senha inválidos.    |
+            | anderson@404.com.br    | 123456      | Usuário e/ou senha inválidos.    |
+            | anderson#$teste.com.br | 123456      | Oops. Informe um email válido!   |
+            |                        | 123456      | Oops. Informe um email válido!   |
+            | anderson@teste.com.br  |             | Oops. Informe sua senha secreta! |
